@@ -16,8 +16,12 @@ public class Launcher {
 	public static void main(String[] args) {
 		
 		// création de donnée par manque de BDD
-		api.addApprenant("DI23", "Vias", "Mathis", "mathis.vias@viacesi.fr", "0666666666", 66, false);
-		api.addApprenant("DI23", "Levallois", "Ewenn", "ewenn.levallois@viacesi.fr", "0666666666", 42, true);
+		api.addApprenant("Promotion", "Nom", "Prenom", "email", "telephone", 0, false);
+		api.addApprenant("DI23", "Vias", "Mathis", "Mathis.Vias@viacesi.fr", "0666666666", 66, false);
+		api.addApprenant("DI23", "Levallois", "Ewenn", "Ewenn.Levallois@viacesi.fr", "0666666667", 42, true);
+		api.addApprenant("DI23", "Gyselings", "Terry", "Terry.Gyselings@viacesi.fr", "0666666668", 42, true);
+		api.addApprenant("DI22", "Michel", "Michelle", "Michelle.Michel@viacesi.fr", "0666666669", 13, true);
+		api.addApprenant("DI23", "Français", "François", "François.Français@viacesi.fr", "0666666660", 2, true);
 		
 		// Lancement du programme principal au travers d'un menu
 		try {
@@ -35,6 +39,8 @@ public class Launcher {
 		String telephone;
 		Integer abscence = 0;
 		Boolean delegue = false;
+		
+		System.out.println(api.getAllApprenant());
 		
 		System.out.println("Que souhaitez-vous faire ?\n");
 		System.out.println("1/ Ajouter un apprenant");

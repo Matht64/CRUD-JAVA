@@ -23,7 +23,7 @@ public class Apprenant {
 	
 	@Override
 	public String toString() {
-		return "\nPrénom : " + this.prenom + ", delégué : " + this.delegue + ", abscence : " + this.abscence;
+		return "\n" + this.prenom + " / "+ this.nom + " / "  + this.delegue + " / " + this.abscence;
 	}
 	
 	public String getPromotion() {

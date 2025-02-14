@@ -113,11 +113,11 @@ public class API {
 		// Supprime un apprenant s'il est dan sla liste et s'il n'est pas délégué
 		for (Apprenant apprenant : apprenants) {
             if ((apprenant.getNom().equals(nom)) & (apprenant.getPrenom().equals(prenom))) {
-            	if (!(apprenant.getDelegue())){
+            	if (apprenant.getDelegue()){
+            		return prenom + " " + nom + "est délégué, veuillez d'abord changer son statut";
+            	}else {
             		apprenants.remove(apprenant);
             		return prenom + " " + nom + " supprimé";
-            	}else {
-            		return prenom + " " + nom + "est délégué, veuillez d'abord changer son statut";
             	}
             }
 		}
